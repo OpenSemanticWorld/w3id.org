@@ -10,7 +10,7 @@ RewriteEngine On
 
 # Rule 1: https://w3id.org/emmo/domain/{DOMAIN}
 ##TESTv1 '/emmo/domain-test --header "Accept: text/html"' "https://emmo-repo.github.io/domain-test/test.html"
-##TESTv1 '/emmo/domain-test --header "Accept: application/rdf+xml"' "https://emmo-repo.github.io/domain-test/test.ttl"
+##TESTv1 '/emmo/domain-test --header "Accept: application/rdf+xml"' "https://raw.githubusercontent.com/emmo-repo/EMMO/domain-test.ttl"
 RewriteCond %{HTTP_ACCEPT} text/html [OR]
 RewriteCond %{HTTP_ACCEPT} application/xhtml\+xml
 RewriteRule ^domain/(domain-)?([^/]+)$ https://emmo-repo.github.io/$1$2/$2.html [R=303,NE,L]
